@@ -7,21 +7,35 @@
         mc:Ignorable="d"
         Icon="Contenido/shaq.ico"
         Title="Calculadora" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Margin="10" Grid.ColumnSpan="3" BorderThickness="2" BorderBrush="Black">
+            <Viewbox Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Right" >
+                <TextBlock x:Name="numerosTextBlock"></TextBlock>
+            </Viewbox>
+        </Border>
 
-
-    <UniformGrid Rows="5" Columns="3" FirstColumn="2">
-
-        <Viewbox x:Name="numerosViewBox"></Viewbox>
-        <Button Margin="10" Click="Button_Click" Tag="1" BorderBrush="#FF170000" Background="#FFFFFCFC">1</Button>
-        <Button Margin="10" Click="Button_Click" Tag="2" BorderBrush="#FF170000" Background="#FFFFFCFC">2</Button>
-        <Button Margin="10" Click="Button_Click" Tag="3" BorderBrush="#FF170000" Background="#FFFFFCFC">3</Button>
-        <Button Margin="10" Click="Button_Click" Tag="4" BorderBrush="#FF170000" Background="#FFFFFCFC">4</Button>
-        <Button Margin="10" Click="Button_Click" Tag="5" BorderBrush="#FF170000" Background="#FFFFFCFC">5</Button>
-        <Button Margin="10" Click="Button_Click" Tag="6" BorderBrush="#FF170000" Background="#FFFFFCFC">6</Button>
-        <Button Margin="10" Click="Button_Click" Tag="7" BorderBrush="#FF170000" Background="#FFFFFCFC">7</Button>
-        <Button Margin="10" Click="Button_Click" Tag="8" BorderBrush="#FF170000" Background="#FFFFFCFC">8</Button>
-        <Button Margin="10" Click="Button_Click" Tag="9" BorderBrush="#FF170000" Background="#FFFFFCFC">9</Button>
-        <Button Margin="10" Click="Button_Click" Tag="0" BorderBrush="#FF170000" Background="#FFFFFCFC">0</Button>
-    </UniformGrid>
-   
+        <Button Margin="10" Grid.Row="1" Grid.Column="0" Click="Button_Click" Tag="1" BorderBrush="#FF170000" Background="#FFFFFCFC" FontSize="25">1</Button>
+        
+        <Button FontSize="25" Grid.Row="1" Grid.Column="1" Margin="10" Click="Button_Click" Tag="2" BorderBrush="#FF170000" Background="#FFFFFCFC">2</Button>
+        <Button FontSize="25" Grid.Row="1" Grid.Column="3" Margin="10" Click="Button_Click" Tag="3" BorderBrush="#FF170000" Background="#FFFFFCFC">3</Button>
+        <Button FontSize="25" Grid.Row="2" Grid.Column="0" Margin="10" Click="Button_Click" Tag="4" BorderBrush="#FF170000" Background="#FFFFFCFC">4</Button>
+        <Button FontSize="25" Grid.Row="2" Grid.Column="1" Margin="10" Click="Button_Click" Tag="5" BorderBrush="#FF170000" Background="#FFFFFCFC">5</Button>
+        <Button FontSize="25" Grid.Row="2" Grid.Column="2" Margin="10" Click="Button_Click" Tag="6" BorderBrush="#FF170000" Background="#FFFFFCFC">6</Button>
+        <Button FontSize="25" Grid.Row="3" Grid.Column="0" Margin="10" Click="Button_Click" Tag="7" BorderBrush="#FF170000" Background="#FFFFFCFC">7</Button>
+        <Button FontSize="25" Grid.Row="3" Grid.Column="1" Margin="10" Click="Button_Click" Tag="8" BorderBrush="#FF170000" Background="#FFFFFCFC">8</Button>
+        <Button FontSize="25" Grid.Row="3" Grid.Column="2" Margin="10" Click="Button_Click" Tag="9" BorderBrush="#FF170000" Background="#FFFFFCFC">9</Button>
+        <Button FontSize="25" Margin="10" Grid.Row="4" Grid.ColumnSpan="3" Click="Button_Click" Tag="0" BorderBrush="#FF170000" Background="#FFFFFCFC">0</Button>
+    </Grid>
 </Window>

@@ -29,7 +29,7 @@ namespace Calculadora
         {
             Button botones = (Button)sender;
 
-            numerosViewBox. += (string)botones.Tag;
+            numerosTextBlock.Text += botones.Tag;
            
         }
     }
