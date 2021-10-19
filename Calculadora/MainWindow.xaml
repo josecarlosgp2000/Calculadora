@@ -12,6 +12,17 @@
             <Setter Property="Margin" Value="5"></Setter>
             <EventSetter Event="Click"  Handler="Button_Click"></EventSetter>
         </Style>
+
+        <Style TargetType="{x:Type Border}" x:Key="borde">
+            <Setter Property="Margin" Value="5">
+            </Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Grid.ColumnSpan" Value="3"></Setter>
+            <Setter Property="Grid.Column" Value="0"></Setter>
+            <Setter Property="Grid.Row" Value="0"></Setter>
+        </Style>
+        
     </Window.Resources>
     <Grid Margin="5">
         <Grid.RowDefinitions>
@@ -26,7 +37,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Margin="5" BorderThickness="1" BorderBrush="Black"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+        <Border Style="{StaticResource borde}">
             <Viewbox  HorizontalAlignment="Right">
                 <TextBlock x:Name="resultadoTextBlock"></TextBlock>
             </Viewbox>
@@ -82,5 +93,4 @@
             </Viewbox>
         </Button>
     </Grid>
-
 </Window>
